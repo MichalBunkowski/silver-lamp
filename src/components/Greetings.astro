@@ -1,0 +1,13 @@
+---
+
+---
+<button style="position: absolute; top: 0; left: 0, " >Get greeting</button>
+
+<script>
+    import { actions } from 'astro:actions';
+
+    const button = document.querySelector('button');
+    button?.addEventListener('click', async () => {
+        const { data, error } = await actions.getGreeting({ name: "Houston" });
+        if (!error) alert(data);    });
+</script>

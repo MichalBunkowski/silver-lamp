@@ -1,6 +1,6 @@
 // @ts-check
 import aws from "astro-sst";
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
 import svelte from "@astrojs/svelte";
 
@@ -12,9 +12,7 @@ export default defineConfig({
   adapter: aws({
     deploymentStrategy: "regional",
     responseMode: "stream",
-    serverRoutes: [
-        '_actions/*'
-    ]
+    serverRoutes: ["_actions/*"],
   }),
-  integrations: [svelte(), tailwind()]
+  integrations: [svelte(), tailwind()],
 });

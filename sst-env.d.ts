@@ -5,13 +5,13 @@
 
 declare module "sst" {
   export interface Resource {
-    "MyWeb": {
-      "type": "sst.aws.Astro"
-      "url": string
-    }
+    MyWeb: {
+      type: "sst.aws.Astro";
+      url: string;
+    };
   }
 }
 /// <reference path="sst-env.d.ts" />
 
-import "sst"
-export {}
+import "sst";
+export {};

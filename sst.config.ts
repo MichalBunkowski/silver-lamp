@@ -11,7 +11,7 @@ export default $config({
         aws: {
           profile: input?.stage === "production" ? "production" : "dev",
         },
-      }
+      },
     };
   },
   async run() {
